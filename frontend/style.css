@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+
+body { font-family: 'Inter', sans-serif; background-color: #f8fafc; }
+
+.sidebar {
+    background-color: #1e3a8a;
+    color: white;
+    height: 100vh;
+    padding: 2rem 1.5rem;
+    position: fixed;
+    width: 300px;
+    box-shadow: 4px 0 10px rgba(0,0,0,0.05);
+}
+
+.main-content { margin-left: 300px; padding: 3rem; max-width: 1400px; }
+
+.tab { display: none; }
+.tab.active { display: block; animation: fadeIn 0.3s ease; }
+
+@keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+.tab-button { padding: 0.75rem 1.5rem; font-weight: 600; color: #64748b; border-bottom: 2px solid transparent; transition: all 0.2s; cursor: pointer; }
+.tab-button.active { color: #2563eb; border-bottom-color: #2563eb; }
+
+.stat-card { background: white; padding: 1.25rem; border-radius: 0.75rem; border: 1px solid #e2e8f0; }
+.table-container { max-height: 550px; overflow-y: auto; }
+
+.download-btn { color: white; padding: 0.75rem 2rem; border-radius: 0.5rem; font-weight: bold; transition: transform 0.1s; }
+.download-btn:hover { transform: scale(1.05); }
+
+.spinner { border: 4px solid #f3f3f3; border-top: 4px solid #3b82f6; border-radius: 50%; width: 40px; height: 40px; animation: spin 1s linear infinite; margin: 0 auto; }
+@keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+
+.error-message { background: #fef2f2; border-left: 4px solid #ef4444; color: #b91c1c; padding: 1rem; margin: 1rem 0; border-radius: 4px; }
+.success-message { background: #f0fdf4; border-left: 4px solid #22c55e; color: #166534; padding: 1rem; margin: 1rem 0; border-radius: 4px; }
+.hidden { display: none !important; }
